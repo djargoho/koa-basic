@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node src",
+    "start:dev" : "nodemon --watch src/ src/index.js"
+  },
   "dependencies": {
     "eslint-config-prettier": "^6.7.0",
     "koa": "^2.11.0"
   },
   "devDependencies": {
-    "eslint": "^6.7.2"
+    "eslint": "^6.7.2",
+    "nodemon": "^2.0.1" 
   }
 }

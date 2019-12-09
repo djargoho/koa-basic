@@ -62,3 +62,22 @@ Nodejs를 통한 서버 개발을 할 예정. (블로그를 만들기위해 진�
 
 ```
 
+- nodemon  
+nodemon dependency는 코드를 변경할 때마다 서버를 자동으로 재시작해준다.
+
+```bash
+
+    yarn add -D nodemon
+
+```
+
+```json
+    // in package.json
+    // src directory를 주시하고 있다가 안에 파일이 변화가 일어나면 이를 감지해서 src/index.js 파일을 재시작 함.
+    
+    "scripts": {
+        "start:dev" : "nodemon  watch src/ src/index.js
+    }
+
+
+```

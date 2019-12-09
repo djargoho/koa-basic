@@ -5,7 +5,7 @@ const app = new Koa();
 //middle ware 단위
 app.use(async (ctx, next) => {
   console.log(ctx.url);
-  console.log(1);
+  console.log(1, "first");
   //쿼리로 authorized에 1을 줘야함
   if (ctx.query.authorized !== '1') {
     ctx.status = 401; //Unauthorized 허가가 안남

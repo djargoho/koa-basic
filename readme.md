@@ -28,6 +28,24 @@ Koa는 따로 Router를 내장하고 있지 않으므로, 추가적으로 라이
 ```shell
     yarn add koa-router
 ```
+## Controller 파일 작성
+
+라우트 처리 함수들을 다른 파일로 따로 분리해서 관리할 수 있음.  
+이런 라우트 처리 함수만 모아 놓은 파일을 **컨트롤러**라 한다.
+
+> ex) 만들어 놓은 posts 폴더에 있는 post.ctrl.js 가 다음과 같다.
+
+
+## KOA Bodyparser
+
+API 기능을 본격적으로 구현하기 전에 먼저 koa-bodyparser 미들웨어를 적용해야 함.  
+Request Body에 JSON 형식으로 데이터를 넣어주면 이를 파싱하여 서버에서 사용할 수 있게 해줌.
+
+```shell
+
+    yarn add koa-bodyparser
+
+```
 
 
 ## 계획 

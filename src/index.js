@@ -1,6 +1,10 @@
 const Koa = require('koa');
 const Router = require('koa-router');
 
+//JSON 형식의 데이터를 파싱할 수 있도록 도와주는 라이브러라이자 KOA middleware
+// router를 적용하는 코드의 윗부분에서 해야줘야 한다. 
+const bodyParser = require('koa-bodyparser');
+
 //root router
 const api = require('./api');
 const posts = require('./api/posts');
@@ -44,6 +48,9 @@ const router = new Router();
 router.use('/api', api.routes());
 
 router.use('/posts', posts.routes());
+
+//라우터 적용 전에 bodyParser를 적용시킨다. 
+app.use(bodyParser());
 
 //app 인스턴스에 router 적용
 app.use(router.routes()).use(router.allowedMethods());

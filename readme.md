@@ -7,15 +7,27 @@ KOA - 미들웨어 기능만 갖추고 나머지는 라이브러리를 적용하
 
 
 &nbsp;
-## **파일 크기**   
-Express(무겁다) < KOA(가볍다) 
+
+## 파일 크기
+
+Express(무겁다) < KOA(가볍다)
 
 ## **특징**
- - async/await 문법을 정식으로 지원. (비동기 작업이 편해짐)
- - 미들웨어의 배열로 구성되어 있음. 
+
+- async/await 문법을 정식으로 지원. (비동기 작업이 편해짐)
+- 미들웨어의 배열로 구성되어 있음.
+
 ## 참고
 
 Nodejs로 서버를 개발 시, Express or KOA는 개인 취향.  
+
+## Router 
+
+Koa는 따로 Router를 내장하고 있지 않으므로, 추가적으로 라이브러리를 추가해줘야 한다. 
+
+```shell
+    yarn add koa-router
+```
 
 
 ## 계획 
@@ -81,3 +93,20 @@ nodemon dependency는 코드를 변경할 때마다 서버를 자동으로 재�
 
 
 ```
+
+- Rest API 적용 규칙 및 틀 
+
+| 메서드 | 설명 |
+|---|:---:|---:|
+| `GET` | 데이터 조회 |
+| `POST` | 데이터 등록 |
+| `DELETE` | 데이터 지우기 |
+| `PUT` | 데이터 정보 통째 수정 |
+| `PATCH` | 데이터 일부 수정 |
+
+
+- Rest API 테스트 
+>  
+> REST API 테스트 할때는 POSTMAN이나  
+> 구글  Extension RestAPI Test Tool을 이용하여 테스트 할 것 
+>  

@@ -1,6 +1,6 @@
 ![KOA](imgs/koa.jpg)
 
-# KOA 백엔드 프레임워크를 통한 백엔드 개발 :rocket:
+# KOA 백엔드 프레임워크를 통한 백엔드 개발 with MongoDB :rocket:
 
 Express - 미들웨어, 라우팅, 템플릿 파일 호스팅 등 다양한 기능이 내장. 
 KOA - 미들웨어 기능만 갖추고 나머지는 라이브러리를 적용하여 사용. (그때 그때 필요한 기능 붙여서)
@@ -114,17 +114,47 @@ nodemon dependency는 코드를 변경할 때마다 서버를 자동으로 재�
 
 - Rest API 적용 규칙 및 틀 
 
-| 메서드 | 설명 |
-|---|:---:|---:|
-| `GET` | 데이터 조회 |
-| `POST` | 데이터 등록 |
-| `DELETE` | 데이터 지우기 |
-| `PUT` | 데이터 정보 통째 수정 |
-| `PATCH` | 데이터 일부 수정 |
+| 메서드 |  설명   |
+| --- | :---: |: |
+| `GET`    |    데이터 조회    |
+| `POST`   |    데이터 등록    |
+| `DELETE` |   데이터 지우기    |
+| `PUT`    | 데이터 정보 통째 수정 |
+| `PATCH`  |  데이터 일부 수정   |
 
 
 - Rest API 테스트 
 >  
 > REST API 테스트 할때는 POSTMAN이나  
 > 구글  Extension RestAPI Test Tool을 이용하여 테스트 할 것 
->  
+
+- dotenv dependency
+
+```shell
+    yarn add dotenv
+```
+
+> 환경변수들을 파일에 넣고 사용할 수 있게하는 개발 도구  
+> 민감한 정보를 코드에 직접 작성하지 않고, 환경변수로 설정하는 것이 좋다.  
+
+- mongoose dependency
+
+```shell
+    yarn add mongoose
+```
+
+> Node.js 환경에서 사용하는 MongoDB 기반 ODM(Object Data Modeling) 라이브러리.  
+> 데이터 문서들을 자바스크립트 객체처럼 사용할 수 있게 해준다.
+
+-mongoose Schema에서 지원해주는 데이터 형식들 
+
+ | 타입                               | 설명                         |
+ | -------------------------------- | -------------------------- |
+ | String                           | 문자열                        |
+ | Number                           | 숫자                         |
+ | Date                             | 날짜                         |
+ | Buffer                           | 파일을 담을 수 있는 버퍼             |
+ | Boolean                          | true 또는 false값             |
+ | Mixed(Schema.Types.Mixed)        | 어떤 데이터도 넣을 수 있는 형식         |
+ | Obj ectld(Schema.Types.Objectld) | 객체 아이디, 주로 다른 객체를 참조할 때 넣음 |
+ | Array                            | 배열 형태의 값으로 [ I로 감싸서 사용     |

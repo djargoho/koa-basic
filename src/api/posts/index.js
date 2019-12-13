@@ -24,12 +24,19 @@
 
 const Router = require('koa-router');
 const posts = new Router();
-const { list, read, remove, update, write } = require('./posts.ctrl');
+const {
+  list,
+  read,
+  remove,
+  update,
+  write,
+  checkObjectId,
+} = require('./posts.ctrl');
 
 posts.get('/', list);
-posts.get('/:id', read);
+posts.get('/:id', checkObjectId, read);
 posts.post('/', write);
-posts.delete('/:id', remove);
-posts.patch('/:id', update);
+posts.delete('/:id', checkObjectId, remove);
+posts.patch('/:id', checkObjectId, update);
 
 module.exports = posts;

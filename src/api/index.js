@@ -1,4 +1,5 @@
 const Router = require('koa-router');
+
 const api = new Router();
 
 //바로도 사용가능하나 이런식으로 api directory를 빼서도 사용이 가능하다.

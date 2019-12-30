@@ -144,7 +144,7 @@ nodemon dependency는 코드를 변경할 때마다 서버를 자동으로 재�
 ```
 
 > Node.js 환경에서 사용하는 MongoDB 기반 ODM(Object Data Modeling) 라이브러리.  
-> 데이터 문서들을 자바스크립트 객체처럼 사용할 수 있게 해준다.
+> 데이터 문서들을 자바스크립트 객체처럼 사용할 수 있게 해준다..
 
 -mongoose Schema에서 지원해주는 데이터 형식들 
 

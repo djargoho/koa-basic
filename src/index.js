@@ -49,7 +49,7 @@ const router = new Router();
 //     ctx.status = 401; //Unauthorized 허가가 안남
 //     return;
 //   }
-
+//
 //   //next 함수를 주석 처리하면 다음 middle ware가 실행이 안된다.
 //   //함수를 호출하면 Promise를 반환한다. express와 다른 점.
 //   //   next().then(() => {
